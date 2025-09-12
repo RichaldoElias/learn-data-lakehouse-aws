@@ -15,4 +15,7 @@ python -m pip install dbt-core dbt-redshift dbt-athena
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
 ```
-after having everything ready, initiate out terraform project to start building our aws infra.
+after having everything ready, initiate terraform project to start building our aws infra.
+to do so, we have to create a folder that will hold all of our terraform config and create a configuration file.
+
+
