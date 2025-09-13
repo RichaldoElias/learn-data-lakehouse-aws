@@ -42,5 +42,5 @@ terraform.rc
 notes.txt
 
 # Ignore db and extracted csv
-src/db/csv_exports/*
-src/db/classicmodels.db
+assets/db/csv_exports/*
+assets/db/classicmodels.db

@@ -1,8 +1,8 @@
 import sqlite3
 
 # Paths
-sqlite_db = "src/db/classicmodels.db"
-mysql_sql_file = "src/db/mysqlsampledatabase.sql"
+sqlite_db = "assets/db/classicmodels.db"
+mysql_sql_file = "assets/db/mysqlsampledatabase.sql"
 
 # Read MySQL script
 with open(mysql_sql_file, "r", encoding="utf-8") as f:

@@ -2,8 +2,8 @@ import sqlite3
 import pandas as pd
 import os
 
-db_path = "src/db/classicmodels.db"
-output_dir = "src/db/csv_exports"
+db_path = "assets/db/classicmodels.db"
+output_dir = "assets/db/csv_exports"
 
 os.makedirs(output_dir, exist_ok=True)
 
