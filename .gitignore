@@ -40,3 +40,7 @@ terraform.rc
 
 # Ignore my notes
 notes.txt
+
+# Ignore db and extracted csv
+src/db/csv_exports/*
+src/db/classicmodels.db
