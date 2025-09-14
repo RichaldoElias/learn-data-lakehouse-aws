@@ -38,11 +38,13 @@ cursor = conn.cursor()
 cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
 tables = cursor.fetchall()
 
+
+# Export each table to a CSV file
 for table_name in tables:
     table = table_name[0]
-    df = pd.read_sql_query(f"SELECT * FROM {table}", conn)
-    csv_path = os.path.join(OUTPUT_DIR, f"{table}.csv")
-    df.to_csv(csv_path, index=False)
+    df = pd.read_sql_query(f"SELECT * FROM {table}", conn) # using pandas to read SQL query and store it in a DataFrame
+    csv_path = os.path.join(OUTPUT_DIR, f"{table}.csv") 
+    df.to_csv(csv_path, index=False) # Export DataFrame to CSV
     print(f"✅ Exported {table} to {csv_path}")
 
 conn.close()
