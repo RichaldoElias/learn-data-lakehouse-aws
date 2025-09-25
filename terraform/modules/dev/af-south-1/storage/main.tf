@@ -1,7 +1,3 @@
-# Providers
-provider "aws" {
-  region = var.region # cape town region
-}
 
 resource "aws_s3_bucket" "datalakehouse" {
   bucket = var.s3_bucket_name
@@ -11,6 +7,7 @@ resource "aws_s3_bucket" "datalakehouse" {
     Environment = "data-lakehouse"
   }
 }
+
 
 
 # Uncomment below to set ACL to private (default is private)
