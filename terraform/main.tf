@@ -32,6 +32,14 @@ resource "aws_s3_object" "gold_bucket" {
   key    = "gold/"
 }
 
+resource "aws_s3_object" "glue_scripts" {
+  bucket = aws_s3_bucket.datalakehouse.id
+  key    = "scripts/"
+  tags = {
+    Name        = "glue sripts folder"
+    Environment = var.environment
+  }
+}
 
 resource "aws_s3_object" "assets_files" {
   for_each = fileset(local.assets_files, "*")
