@@ -36,7 +36,7 @@ resource "aws_s3_object" "gold_bucket" {
 resource "aws_s3_object" "assets_files" {
   for_each = fileset(local.assets_files, "*")
   bucket   = aws_s3_bucket.datalakehouse.id
-  key      = "assets/${each.value}"
+  key      = "bronze/${each.value}"
   source   = "${local.assets_files}/${each.value}"
 }
 
